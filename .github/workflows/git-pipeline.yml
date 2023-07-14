@@ -55,6 +55,4 @@ jobs:
      run: |
        workdir="${GITHUB_WORKSPACE}"
        ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ubuntu -i $workdir/host_inventory $workdir/playbooks/website-test.yml --private-key '/home/ubuntu/.ssh/Testing.pem'
-       
-       ,
-
+    
