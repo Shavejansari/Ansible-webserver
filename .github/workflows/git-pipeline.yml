@@ -46,7 +46,7 @@ jobs:
      run: |
        workdir="${GITHUB_WORKSPACE}"
        ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -u ubuntu -i $workdir/host_inventory $workdir/playbooks/website-update.yml --private-key '/home/ubuntu/.ssh/Testing.pem'
-
+   
  website-test:
    needs: website-update
    runs-on: self-hosted
