@@ -1,7 +1,7 @@
 
 - name: Test the website
   hosts: webservers
-  become: yes
+  
   become_user: root
 
   tasks:
