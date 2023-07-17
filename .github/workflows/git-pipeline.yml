@@ -80,7 +80,7 @@ slack_on_failure:
        env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
- slack_on_success:
+slack_on_success:
   runs-on: self-hosted
   needs: [repo_updated, install_ansible, install_ansible_lint, run_ansible_lint, install_apache, website-update, website-test]
   if: ${{ needs.repo_updated.result == 'success' && needs.install_ansible.result == 'success' && needs.install_ansible_lint.result == 'success' && needs.run_ansible_lint.result == 'success' && needs.install_apache.result == 'success' && needs.website-update.result == 'success' && needs.website-test.result == 'success' }}
